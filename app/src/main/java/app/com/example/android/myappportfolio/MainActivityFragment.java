@@ -42,7 +42,9 @@ public class MainActivityFragment extends Fragment {
                         projectList
                 );
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View header = inflater.inflate(R.layout.header,container,false);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_project);
+        listView.addHeaderView(header);
         listView.setAdapter(mProjectAdapter);
         return rootView;
     }
