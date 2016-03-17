@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">My App Portfolio</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="projectList">
+        <item>SPOTIFY STEAMER</item>
+        <item>SCORES APP</item>
+        <item>LIBRARY APP</item>
+        <item>BUILD IT BIGGER</item>
+        <item>XYZ READER</item>
+        <item>CAPSTONE: MY OWN APP</item>
+    </string-array>
 </resources>

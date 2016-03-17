@@ -24,14 +24,18 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Create the project list to be added to listview.
-        String[] data = {
-                "SPOTIFY STEAMER",
-                "SCORES APP",
-                "LIBRARY APP",
-                "BUILD IT BIGGER",
-                "XYZ READER",
-                "CAPSTONE: MY OWN APP"
-        };
+//        String[] data = {
+//                "SPOTIFY STEAMER",
+//                "SCORES APP",
+//                "LIBRARY APP",
+//                "BUILD IT BIGGER",
+//                "XYZ READER",
+//                "CAPSTONE: MY OWN APP"
+//        };
+
+        String[] data = getResources().getStringArray(R.array.projectList);
+
+
         List<String> projectList = new ArrayList<>(Arrays.asList(data));
 
         mProjectAdapter =
