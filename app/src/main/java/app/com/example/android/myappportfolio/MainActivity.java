@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,11 +56,20 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sendMessage(View view) {
         Button clickedButton = (Button)view.findViewById(R.id.list_item_project_button);
+
+        ListView listParent = (ListView)view.getParent();
+
+//        System.out.println("[AniB]: getChildCount: " +listParent.getChildCount());
+
+        for (int i = 1; i < listParent.getChildCount(); i++ ){
+            listParent.getChildAt(i).setBackgroundColor(0xFFF08C35);
+        }
+
         Context context = getApplicationContext();
         CharSequence text = "This Button will launch " +clickedButton.getText();
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-//        view.findViewById(R.id.list_item_project_button).setBackgroundColor(Color.MAGENTA);
+        view.findViewById(R.id.list_item_project_button).setBackgroundColor(Color.MAGENTA);
     }
 }
